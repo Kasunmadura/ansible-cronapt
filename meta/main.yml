@@ -31,11 +31,12 @@ galaxy_info:
   # platform on this list, let us know and we'll get it added!
   #
   platforms:
-  - name: Ubuntu
-    versions
-    - 12.04
-    - 14.04
-    - 16.04
+   - name: Ubuntu
+     versions:
+      - precise
+      - quantal
+      - raring
+      - saucy
   #- name: EL
   #  versions:
   #  - all
