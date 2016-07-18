@@ -1,0 +1,18 @@
+---
+- name: Install cron-apt
+  apt: name=cron-apt state=present
+
+- name: Add new source list for security updates
+  template: src=security.list.j2 dest=/etc/apt/sources.list.d/security.list owner=root group=root mode=0644
+
+- name: Setup cron-apt default configration
+  template: src=config.j2 dest=/etc/cron.d/config owner=root group=root mode=0644
+
+- name: Copy cron-apt action config file
+  copy: src=5-security-action dest=/etc/cron-apt/action.d/5-security owner=root group=root mode=0644
+
+- name: Copy cron-apt secutity repo Configfile
+  copy: src=5-security-config dest=/etc/cron-apt/config.d/5-security owner=root group=root mode=0644
+
+- name: configure cron tasks for cron-apt
+  template: src=cron-apt.j2 dest=/etc/cron.d/cron-apt owner=root group=root mode=0644

@@ -1,0 +1,44 @@
+---
+#Mention you apt mirror url to update security list
+security_mirror_url: http://security.debian.org/ wheezy/updates  main
+
+# cron details to run secutity updates
+
+cron_apt_run_week: 1
+cron_apt_run_minute: 30
+cron_apt_run_hour: 10
+cron_apt_run_dow: 2
+
+
+
+# Configuration for cron-apt. For further information about the possible
+# configuration settings see /usr/share/doc/cron-apt/README.gz.
+
+mailonconfig: never
+debugconfig: verbose
+
+
+
+#Mailon
+
+#  When to send email about the cron-apt results.
+#  Value:
+#    error   (send mail on error runs)
+#    upgrade (when packages are upgraded)
+#    changes (mail when change in output from an action)
+#    output  (send mail when output is generated)
+#    always  (always send mail)
+#    never   (never send mail)
+#            (else never send mail)
+
+#DEBUG
+
+#  When to log to the cron-apt log file.
+#  Value:
+#   verbose (log everything)
+#   always  (always log)
+#   upgrade (when packages is upgraded)
+#   changes (log when change in output from an action)
+#   output  (log when output is generated)
+#   error   (log error runs only)
+#   never   (log nothing)
