@@ -2,4 +2,5 @@
 # Regular cron jobs for the cron-apt package
 #
 # Every week {{ cron_apt_run_week }} of the month at 4.00 PM clock.
+#
 {{ cron_apt_run_minute }} {{ cron_apt_run_hour }} {{ cron_apt_run_week }} * {{ cron_apt_run_dow }}	root	test -x /usr/sbin/cron-apt && /usr/sbin/cron-apt
