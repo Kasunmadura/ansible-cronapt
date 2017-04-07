@@ -27,4 +27,4 @@ Including an example of how to use your role (for instance, with variables passe
 Author Information
 ------------------
 Kasun Madura Rathnayaka
-mail:kasummaduraeng@gmail.com
+mail:kasunmaduraeng@gmail.com
